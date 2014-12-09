@@ -1,0 +1,37 @@
+<div class="item">
+    <div class="left_wrap">
+        <table>
+        <tr>
+            <td class="pic">
+                <div class="inner">
+                    <img width="214" height="157" src="<?php echo $this->proposal->getPreview(); ?>" />
+                </div>
+            </td>
+            <td class="description">
+                <div class="inner">
+
+                    <h2><a href="/proposal/<?php echo $this->proposal->getUri(); ?>"><?php echo $this->proposal->getProposal(); ?></a></h2>
+
+                    <p><?php echo $this->proposal->getDescription(); ?></p>
+
+                    <div class="property">
+
+                        <?php if ($this->proposal->getInclusion()): ?>
+                            <span class="plane">включен авиперелет</span>
+                        <?php else: ?>
+                            <span class="plane">не включен авиперелет</span>
+                        <?php endif; ?>
+
+                        <span class="people">на группу / <?php echo $this->proposal->getPersons(); ?> пер.</span>
+                    </div>
+
+                </div>
+
+            </td>
+            <td class="more">
+                <a href="/proposal/<?php echo $this->proposal->getUri(); ?>"></a>
+            </td>
+        </tr>
+    </table>    
+    </div>
+</div>

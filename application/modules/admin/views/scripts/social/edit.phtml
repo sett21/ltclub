@@ -1,0 +1,14 @@
+<h2>Социальные сети</h2>
+
+<?php if (is_null($this->topmenu->getId())) : ?>
+
+    <ul>
+        <?php foreach ($this->result as $item): ?>
+            <li><a href="/admin/social/edit/?id=<?php echo $item->getId(); ?>"><?php echo $item->getSocial(); ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+
+<?php else: ?>
+    <h3><?php echo $this->topmenu->getSocial(); ?></h3>
+    <?php echo $this->form; ?>
+<?php endif; ?>

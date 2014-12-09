@@ -1,0 +1,14 @@
+<h2>Нижнее меню</h2>
+
+<?php if (is_null($this->topmenu->getId())) : ?>
+
+    <ul>
+        <?php foreach ($this->result as $item): ?>
+            <li><a href="/admin/bottommenu/edit/?id=<?php echo $item->getId(); ?>"><?php echo $item->getBottomMenu(); ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+
+<?php else: ?>
+    <h3><?php echo $this->topmenu->getBottomMenu(); ?></h3>
+    <?php echo $this->form; ?>
+<?php endif; ?>

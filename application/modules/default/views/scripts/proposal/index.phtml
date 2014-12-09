@@ -1,0 +1,56 @@
+<div class="filter_left_radius">
+    <div class="filter_right_radius">
+        <div class="filter append-bottom">
+            <a href="/" class="home">&nbsp;</a>
+            <a href="/">Пропозиции</a>
+            <a href="#" class="active"><?php echo $this->proposal->getProposal(); ?></a>
+        </div>
+    </div>
+</div>
+
+<div id="content" class="append-bottom">
+
+    <img width="710" src="<?php echo $this->proposal->getBanner(); ?>" />
+
+    <div class="outer">
+
+        <div class="inner">
+
+            <div class="property right" style="margin-top: 10px;">
+
+                <?php if ($this->proposal->getInclusion()): ?>
+                    <span class="plane">включен авиперелет</span>
+                <?php else: ?>
+                    <span class="plane">не включен авиперелет</span>
+                <?php endif; ?>
+
+                <span class="people"><?php echo $this->proposal->getPersons(); ?> пер.</span>
+
+            </div>
+
+            <h2><?php echo $this->proposal->getProposal(); ?></h2>
+        </div>
+
+    </div>
+
+    <div class="inner">
+
+        <?php echo $this->proposal->getText(); ?>
+
+        <div class="order">
+            <a href="#">Оформить</a>
+        </div>
+
+    </div>                    
+
+</div>
+
+<div class="filter_left_radius">
+    <div class="filter_right_radius">
+        <div class="filter append-bottom">
+            <a href="/" class="home">&nbsp;</a>
+            <a href="/">Пропозиции</a>
+            <a href="#" class="active"><?php echo $this->proposal->getProposal(); ?></a>
+        </div>
+    </div>
+</div>

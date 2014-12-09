@@ -1,0 +1,13 @@
+<h2>Типы пропозицый</h2>
+
+<?php foreach ($this->results as $item): ?>
+    <ul>
+        <li>
+            <?php echo $item->getType(); ?><br/>
+            <small><a href="<?php echo sprintf("/admin/proposalstype/edit/?id=%s", $item->getId()) ?>">редактировать</a>
+                <a href="<?php echo sprintf("/admin/proposalstype/drop/?id=%s", $item->getId()) ?>">удалить</a></small>
+        </li>
+    </ul>
+<?php endforeach; ?>
+
+<a href="/admin/proposalstype/add">Добавить</a>

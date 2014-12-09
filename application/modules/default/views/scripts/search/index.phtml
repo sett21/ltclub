@@ -1,0 +1,43 @@
+<div class="filter_left_radius append-bottom">
+    <div class="filter_right_radius">
+        <div class="filter">
+            <a href="/" class="home">&nbsp;</a>
+            <a href="#" class="active">Поиск</a>
+        </div>
+    </div>
+</div>
+
+<div id="content" class="append-bottom">
+
+    <div class="outer">
+
+        <div class="inner">
+            <h2>Поиск</h2>
+        </div>
+
+    </div>
+
+    <div class="inner">
+
+        
+        
+        <ol>
+            <?php foreach ($this->result as $item): ?>
+            <li class="append-bottom"><a href="<?php echo sprintf('%s/%s', $item->getController(), $item->getHrefId()); ?>"><?php echo $item->getSearch(); ?></a><br />
+                <?php echo $item->getDescription(); ?>
+            </li>
+            <?php endforeach; ?>
+        </ol>
+
+    </div>                    
+
+</div>
+
+<div class="filter_left_radius append-bottom">
+    <div class="filter_right_radius">
+        <div class="filter">
+            <a href="/" class="home">&nbsp;</a>
+            <a href="#" class="active">Поиск</a>
+        </div>
+    </div>
+</div>

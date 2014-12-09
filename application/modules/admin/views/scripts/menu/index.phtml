@@ -1,0 +1,25 @@
+<h2>Меню</h2>
+
+<?php if (is_null($this->type)): ?>
+    <?php foreach ($this->results as $item): ?>
+        <ul>
+            <li>
+                <a href="/admin/menu/?type=<?php echo $item->getId(); ?>"><?php echo $item->getType(); ?></a>
+            </li>
+        </ul>
+    <?php endforeach; ?>
+<?php else: ?>
+    <?php foreach ($this->results as $item): ?>
+        <ul>
+            <li>
+                <?php echo $item->getMenu(); ?><br />
+                <small><a href="/admin/menu/edit/?type=<?php echo $this->type; ?>&id=<?php echo $item->getId(); ?>">редактировать</a>
+                <a href="/admin/menu/drop/?type=<?php echo $this->type; ?>&id=<?php echo $item->getId(); ?>">удалить</a></small>
+            </li>
+        </ul>
+    <?php endforeach; ?>
+<?php endif; ?>
+
+<?php if (!is_null($this->type)): ?>
+<a href="/admin/menu/add/?type=<?php echo $this->type; ?>">Добавить</a>
+<?php endif; ?>

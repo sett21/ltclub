@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <?= $this->headTitle(); ?>
+        <?= $this->headLink(); ?>
+        <?= $this->headScript(); ?>
+        <?= $this->headMeta(); ?>
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.menutop td:first-child').mouseenter(function() {
+                    $('.menutop_bg_l_hover').css('backgroundImage', 'url(/assets/images/main_menu_highlight_left.png)');
+                });
+
+                $('.menutop td:first-child').mouseleave(function() {
+
+                    $('.menutop_bg_l_hover').css('backgroundImage', '');
+                });
+
+                $('.menutop td:last-child').mouseenter(function() {
+                    $('.menutop_bg_r_hover').css('backgroundImage', 'url(/assets/images/main_menu_highlight_right.png)');
+                });
+
+                $('.menutop td:last-child').mouseleave(function() {
+
+                    $('.menutop_bg_r_hover').css('backgroundImage', '');
+                });
+
+                $('#search input[type="image"]').mouseenter(function() {
+                    $(this).attr('src', '/assets/images/magnifier_active.png');
+                });
+
+                $('#search input[type="image"]').mouseleave(function() {
+                    $(this).attr('src', '/assets/images/magnifier.png');
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+
+        <!-- Main menu -->
+        <div id="mainmenu" class="append-bottom">
+
+            <div id="login" class="container">
+                <form action="#" class="right" method="post">
+
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Логин" />
+                                <input type="password" placeholder="Пароль" />
+                            </td>
+                            <td>
+                                <input type="image" src="/assets/images/enter.png" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </form>
+                <div class="span-12">
+                    <img src="/assets/images/registration.png">
+                    <img src="/assets/images/iata.png" height="30" style="margin-left:140px;">
+                </div>
+                <div class="span-4" style="padding-top: 8px; display: none;">
+                    <a href="#">Уже имеете акаунд >>></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="container showgrid1">
+
+                <hr class="space append-bottom" />
+
+                <div class="span-12 ">
+                    <img src="/assets/images/logo.png" />
+                </div>
+
+                <div class="span-12 last">
+
+                    <hr class="space prepend-top append-bottom" />
+
+                    <div id="contact" class="span-6">
+                        <div class="inner">
+                            моб. <span>044-251-88-88</span><br />ул. Б.Васильковская, 84/20
+                        </div>
+                    </div>
+
+                    <form id="search" class="span-6 last" action="/" method="post">
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="outer">
+                                        <input size="18" type="text" name="text" value="" placeholder="Что ищем?" />
+                                    </div>
+                                </td>
+                                <td style="padding-top: 9px;">
+                                    <input type="image" src="/assets/images/magnifier.png" name="magnifier" value="" />
+                                </td>
+                            </tr>
+                        </table>
+
+                    </form>
+
+                    <div class="clear"></div>
+                </div>
+
+                <div class="clear"></div>
+
+                <hr class="space append-bottom" />
+
+                <!--<div class="menutop_bg_l">
+                    <div class="menutop_bg_l_hover">
+                        <div class="menutop_bg_r">
+                            <div class="menutop_bg_r_hover">
+                                <table class="menutop">
+                                    <tr>
+                                        <?php foreach ($this->topmenus as $key => $item): ?>
+                                        <td class="m_item_<?php echo ++$key; ?>" ><a href="<?php echo (!strlen($item->getHref())) ? "/page/" . $item->uri : $item->getHref() ;?>"><?php echo $item->getMenu(); ?></a></td>
+                                        <?php endforeach; ?>
+                                    </tr>
+                                </table>-->
+                                
+                           <!-- </div>
+                        </div>
+                    </div>
+                </div>-->
+
+
+                <div class="clear"></div>
+
+            </div>
+
+        </div>
+        <div class="container">
+            <ul class="main-menu">
+                <li><a href="#"><i class="arr"></i>Мы предлагаем</a></li>
+                <li>
+                    <a href="#"><i class="arr"></i>MICE</a>
+                    <ul class="sub">
+                        <li><a href="#">Пункт 1</a></li>
+                        <li><a href="#">Пункт 2</a></li>
+                        <li><a href="#">Пункт 3</a></li>
+                        <li><a href="#">Пункт 4</a></li>
+                    </ul>    
+                </li>
+                <li><a href="#"><i class="arr"></i>Нас рекомендуют</a></li>
+                <li><a href="#"><i class="arr"></i>Наш опыт</a></li>
+            </ul>
+        </div>
+        <!-- [^]Main menu -->
+
+        <div id="services" class="container append-bottom">
+
+            <!--<table>
+                <tr>
+                    <?php foreach ($this->services as $key => $item): ?>
+                        <td class="service_<?php echo ++$key; ?>"><a href="/page/<?php echo $item->uri; ?>"><span><?php echo $item->getService(); ?></span></a></td>
+                    <?php endforeach; ?>
+                </tr>
+            </table>-->
+            
+            <div class="clear"></div>
+        </div>
+        <div class="baner">
+            
+        </div>
+        <div class="container">
+            <ul class="sub-menu">
+                <li id="i1"><a href="#"><i class="icon"></i><span>КТО МЫ</span></a></li>
+                <li id="i2"><a href="#"><i class="icon"></i><span>МЕЖДУНАРОДНЫЙ ТУРИЗМ</span></a></li>
+                <li id="i3"><a href="#"><i class="icon"></i><span>ИНСЕНТИВ ТУРЫ</span></a></li>
+                <li id="i4">
+                    <a href="#"><i class="icon"></i><span>ON LINE СЕРВИС</span></a>
+                    <ul class="sub-sub">
+                        <li class="two-level">
+                            <a href="#"><i class="ic"></i>Пункт 1</a>
+                            <ul>
+                                <li><a href="#">Пункт 1</a></li>
+                                <li><a href="#">Пункт 1</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ic"></i>Пункт 1</a></li>
+                        <li><a href="#"><i class="ic"></i>Пункт 1</a></li>
+                        <li><a href="#"><i class="ic"></i>Пункт 1</a></li>
+                        <li><a href="#"><i class="ic"></i>Пункт 1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="container append-bottom">
+
+            <!-- Left menu -->
+            <div class="span-6">
+
+                <?php echo $this->menu; ?>
+
+                <ul id="leftmenu">
+
+                    <?php
+                    foreach ($this->leftmenus as $lm): if (!is_null($lm->getParentId()))
+                            continue;
+                        ?>
+                        <li class="<?php echo ($lm->getId() == $this->activemenuid) ? 'active' : ''; ?>">
+                            <a href="#"><?php echo $lm->getMenu(); ?></a>
+                            <ul>
+                                <?php foreach ($this->leftmenus as $slm): ?>
+                                    <?php
+                                    if ($slm->getParentId() != $lm->getId())
+                                        continue;
+                                    ?>
+                                    <li>
+                                        <?php if (!is_null($slm->uri)) : ?>
+                                            <a href="<?php echo sprintf("/page/%s", $slm->uri); ?>"><?php echo $slm->getMenu(); ?></a>
+                                        <?php else: ?>
+                                            <a href="<?php echo $slm->getHref(); ?>"><?php echo $slm->getMenu(); ?></a>
+                                        <?php endif; ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </li>
+                    <?php endforeach; ?>
+
+                </ul>
+
+            </div>
+            <!-- [^] Left menu -->
+
+            <!-- Right column -->
+            <div class="span-18 last">
+
+                <?php echo $this->layout()->content; ?>
+
+            </div>
+            <!-- [^] Right column -->
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div id="footer">
+
+            <div class="line">
+
+                <div class="container">
+
+                    <div class="span-6 prepend-top append-bottom">
+                        <img src="/assets/images/bottom_logo.png" class="append-bottom" /><br />
+                        Lumiere Travel Club © 2012
+                    </div>
+
+                    <div class="span-18 prepend-top append-bottom last">
+
+                        <table class="menu append-bottom">
+                            <tr>
+
+                                <?php foreach ($this->bottommenus as $item): ?>
+                                    <td>
+                                        <a href="/page/<?php echo $item->uri; ?>"><?php echo $item->getMenu(); ?></a>
+                                    </td>
+                                <?php endforeach; ?>
+
+                            </tr>
+                        </table>
+
+                        <form id="subscribe" class="left">
+                            <input type="text" name="subscribe" placeholder="Введите Ваш Email" value="" /><a href="#">Новостная рассылка</a>
+                        </form>
+
+                        <div id="social" class="left">
+
+                            <?php foreach ($this->socials as $item): ?>
+                                <a target="_blank" href="<?php echo $item->getHref(); ?>"><img src="<?php echo $item->getImg(); ?>" /></a>
+                            <?php endforeach; ?>
+
+                        </div>
+
+                        <div class="clear"></div>
+
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
+
+

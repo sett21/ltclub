@@ -1,0 +1,13 @@
+<h2>Текстовые страницы</h2>
+
+<?php foreach ($this->results as $item): ?>
+    <ul>
+        <li>
+            <?php echo $item->getTitle(); ?><br/>
+            <small><a href="<?php echo sprintf("/admin/textpage/edit/?id=%s", $item->getId()) ?>">редактировать</a>
+                <a href="<?php echo sprintf("/admin/textpage/drop/?id=%s", $item->getId()) ?>">удалить</a></small>
+        </li>
+    </ul>
+<?php endforeach; ?>
+
+<a href="/admin/textpage/add">Добавить</a>

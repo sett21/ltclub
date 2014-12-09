@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <?= $this->headLink(); ?>
+        <?= $this->headScript(); ?>
+
+        <style type="text/css">
+            body {
+                background: none;
+            }
+            
+            #menu {
+                background: #eee;
+            }
+            
+            #menu td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            
+            <table id="menu">
+                <tr>
+                    <td width="80"><a href="/admin/proposals">Пропозиции</a></td>
+                    <td width="95"><a href="/admin/proposalstype">Тип пропозиции</a></td>
+                    <td width="120"><a href="/admin/textpage">Текстовые страницы</a></td>
+                    <td width="30"><a href="/admin/menu">Меню</a></td>
+                    <td width="50"><a href="/admin/service/edit">Сервисы</a></td>
+                    <td width="50"><a href="/admin/subscribe/">Рассылка</a></td>
+                    <td width="105"><a href="/admin/social/edit">Социальные сети</a></td>
+                    <td><a href="/admin/auth/logout">Выход</a></td>
+                </tr>
+            </table>
+            
+            <?php echo $this->layout()->content; ?>
+        </div>
+    </body>
+</html>
+
+

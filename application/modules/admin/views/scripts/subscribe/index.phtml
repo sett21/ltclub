@@ -1,0 +1,14 @@
+<h2>Рассылка</h2>
+
+<a href="/admin/subscribe/create/">Создать рассылку</a><br /><br />
+
+<?php foreach ($this->results as $item): ?>
+    <ul>
+        <li>
+            <?php echo $item->getSubscribe(); ?><br />
+            <small><a href="/admin/subscribe/edit/?id=<?php echo $item->getId(); ?>">редактировать</a>
+                <a href="/admin/subscribe/drop/?id=<?php echo $item->getId(); ?>">удалить</a></small>
+        </li>
+    </ul>
+<?php endforeach; ?>
+

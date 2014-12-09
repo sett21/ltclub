@@ -1,0 +1,47 @@
+<div id="proposals">
+
+    <div class="filter_left_radius">
+        <div class="filter_right_radius">
+            <div class="filter append-bottom">
+
+                <span class="result">Всего предложений <span><?php echo $this->count; ?></span></span>
+
+                <span class="type">&nbsp;</span>
+
+                <select name="type">
+                    <option value="0">Все / Треннинги</option>
+                    <?php foreach ($this->types as $type): ?>
+                        <option value="<?php echo $type->getId(); ?>"><?php echo $type->getType(); ?></option>
+                    <?php endforeach; ?>
+                </select>
+
+                <input type="checkbox" name="inclusion" /> авиаперелет
+
+                <div class="right">
+                    <span>показывать:</span>
+
+                    <select name="limit">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="items">
+        <?php foreach ($this->proposals as $proposal) : ?>
+            <?php
+            echo $this->partial('partials/proposal.phtml', array(
+                'proposal' => $proposal
+            ));
+            ?>
+        <?php endforeach; ?>
+    </div>
+
+</div>
+
+<?php if ($this->count > Application_Model_ProposalMapper::LIMIT): ?>
+    <div id="more_proposal"><a href="#"><span>Показать еще 3 предложения</span></a></div>
+<?php endif; ?>

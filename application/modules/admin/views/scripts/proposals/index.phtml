@@ -1,0 +1,12 @@
+<h2>Пропозиции</h2>
+
+<?php foreach ($this->results as $item): ?>
+    <ul>
+        <li>
+            <?php echo $item->getProposal(); ?><br/>
+            <small><a href="<?php echo sprintf("/admin/proposals/edit/?id=%s", $item->getId()) ?>">редактировать</a>
+                <a href="<?php echo sprintf("/admin/proposals/drop/?id=%s", $item->getId()) ?>">удалить</a></small>
+        </li>
+    </ul>
+<?php endforeach; ?>
+<a href="/admin/proposals/add">Добавить</a>
