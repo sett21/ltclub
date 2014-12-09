@@ -1,5 +1,33 @@
 
 $(document).ready(function(){
+    // Autocomplite
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $('input[name="city-dep"],input[name="city-arr"]').autocomplete({
+      source: availableTags
+    });
     // Tabs
     var cntrTab = $('.tabs-cnt li a');
     var tabs = $('.tabs .bl-t');
@@ -12,7 +40,7 @@ $(document).ready(function(){
         tabs.removeClass('active');
         $(tabId).addClass('active')
     });
-    
+
     $(".date").datepicker();
 
     // Clickble menu
