@@ -1,6 +1,20 @@
 
 $(document).ready(function(){
+    // Tabs
+    var cntrTab = $('.tabs-cnt li a');
+    var tabs = $('.tabs .bl-t');
     
+    cntrTab.on('click',function(event){
+        event.preventDefault();
+        var tabId = $(this).attr('href');
+        cntrTab.parent('li').removeClass('active');
+        $(this).parent('li').addClass('active');
+        tabs.removeClass('active');
+        $(tabId).addClass('active')
+    });
+    
+    $(".date").datepicker();
+
     // Clickble menu
     $('#leftmenu > li > a').click(function(){
         
