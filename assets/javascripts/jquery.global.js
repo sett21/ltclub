@@ -41,7 +41,9 @@ $(document).ready(function(){
         $(tabId).addClass('active')
     });
 
-    $(".date").datepicker();
+    $(".date").datepicker({
+        dateFormat: "dd-mm-yy"
+    });
 
     // Clickble menu
     $('#leftmenu > li > a').click(function(){
@@ -199,5 +201,5 @@ $(document).ready(function(){
             window.location = '/proposal/' + ui.item.uri
         }
     });
-    
+
 });

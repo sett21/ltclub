@@ -1,0 +1,220 @@
+<div class="tabs-cnt">
+    <ul>
+        <li class="active"><a href="#tab-1">ТУДА И ОБРАТНО</a></li>
+        <li><a href="#tab-2">В ОДИН КОНЕЦ</a></li>
+        <li><a href="#tab-3">НЕСКОЛЬКО МЕСТ</a></li>
+    </ul>
+</div>
+<div class="tabs">
+    <div class="bl-t active" id="tab-1">
+    <form action="http://easystarter-s2.symphony.cz/ru/index.php?S2_WEB_ID=Lumiere" method="get" target="_blank" onsubmit="return chek_avia_form('rt')">
+    	<input type="hidden" name="next" value="1">
+    	<input type="hidden" name="JOURNEY_TYPE" value="RT">
+    	<input type="hidden" name="PRICER_PREF" value="MUP">
+    	<input type="hidden" name="ID_LOCATION" value="UA2">
+    	<input type="hidden" name="DEP_0" value="" id="form_value_dep_0">
+    	<input type="hidden" name="ARR_0" value="" id="form_value_arr_0">
+        <div class="row">
+            <div class="left">
+                <label>Откуда</label>
+                <input type="text" id="dep_0" autocomplete="off">
+                <div class="aeroplist" id="aeroplist_dep"></div>
+                <label>Дата отправления</label>
+                <input type="text" name="FULL_DATE_0" class="date" readonly id="FULL_DATE_0">
+                <label>Тип тарифа</label>
+                <select name="CABIN_PREF">
+                    <option value="Y">Эконом</option>
+                    <option value="C">Бизнес</option>
+                </select>
+            </div>
+            <div class="right">
+                <label>Куда</label>
+                <input type="text" id="arr_0" autocomplete="off">
+                <div class="aeroplist" id="aeroplist_arr"></div>
+                <label>Дата возвращения</label>
+                <input type="text" name="FULL_DATE_1" class="date" readonly id="FULL_DATE_1">
+                <div class="col-3">
+                    <label>Взрослые</label>
+                    <select name="ADTCOUNT">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label>Дети 2-12</label>
+                    <select name="CHDCOUNT">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label>Младенцы 0-2</label>
+                    <select name="INFCOUNT">
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Поиск">
+        </div>
+    </form>
+    </div>
+    <div class="bl-t" id="tab-2">
+    	<form action="http://easystarter-s2.symphony.cz/ru/index.php?S2_WEB_ID=Lumiere" method="get" target="_blank" onsubmit="return chek_avia_form('ow')">
+    	<input type="hidden" name="next" value="1">
+    	<input type="hidden" name="JOURNEY_TYPE" value="OW">
+    	<input type="hidden" name="PRICER_PREF" value="MUP">
+    	<input type="hidden" name="ID_LOCATION" value="UA2">
+    	<input type="hidden" name="DEP_0" value="" id="form_value_dep_1">
+    	<input type="hidden" name="ARR_0" value="" id="form_value_arr_1">
+        <div class="row">
+            <div class="left">
+                <label>Откуда</label>
+                <input type="text" id="dep_1">
+                <div class="aeroplist" id="aeroplist_dep_2"></div>
+            </div>
+            <div class="right">
+                <label>Куда</label>
+                <input type="text" id="arr_1">
+                <div class="aeroplist" id="aeroplist_arr_2"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 first">
+               <label>Дата отправления</label>
+               <input type="text" name="FULL_DATE_0" class="date" readonly id="FULL_DATE_2">
+            </div>
+            <div class="col-5">
+                <label>Тип тарифа</label>
+                <select name="CABIN_PREF">
+                    <option value="Y">Эконом</option>
+                    <option value="C">Бизнес</option>
+                </select>
+            </div>
+            <div class="col-5">
+                <label>Взрослые</label>
+                <select name="ADTCOUNT">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="col-5">
+                <label>Дети 2-12</label>
+                <select name="CHDCOUNT">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="col-5">
+                <label>Младенцы 0-2</label>
+                <select name="INFCOUNT">
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Поиск">
+        </div>
+        </form>
+    </div>
+    <div class="bl-t" id="tab-3">
+    	<form action="http://easystarter-s2.symphony.cz/ru/index.php?S2_WEB_ID=Lumiere" method="get" target="_blank" onsubmit="return chek_avia_form('oj')">
+    	<input type="hidden" name="next" value="1">
+    	<input type="hidden" name="JOURNEY_TYPE" value="OJ">
+    	<input type="hidden" name="PRICER_PREF" value="MUP">
+    	<input type="hidden" name="ID_LOCATION" value="UA2">
+    	<input type="hidden" name="DEP_0" value="" id="form_value_dep_2_1">
+    	<input type="hidden" name="DEP_1" value="" id="form_value_dep_2_2">
+    	<input type="hidden" name="ARR_0" value="" id="form_value_arr_2_1">    
+    	<input type="hidden" name="ARR_1" value="" id="form_value_arr_2_2">    
+        <div class="row">
+            <div class="col-3">
+                <label>Откуда</label>
+                <input type="text" id="dep_2_1">
+                <div class="aeroplist" id="aeroplist_dep_3_1"></div>
+            </div>
+            <div class="col-3">
+                <label>Куда</label>
+                <input type="text" id="arr_2_1">
+                <div class="aeroplist" id="aeroplist_arr_3_1"></div>
+            </div>
+            <div class="col-3">
+                <label>Дата отправления</label>
+                <input type="text" name="FULL_DATE_0" class="date" readonly id="FULL_DATE_3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <label>Откуда</label>
+                <input type="text" id="dep_2_2">
+                <div class="aeroplist" id="aeroplist_dep_3_2"></div>
+            </div>
+            <div class="col-3">
+                <label>Куда</label>
+                <input type="text" id="arr_2_2">
+                <div class="aeroplist" id="aeroplist_arr_3_2"></div>
+            </div>
+            <div class="col-3">
+                <label>Дата возвращения</label>
+                <input type="text" name="FULL_DATE_1" class="date" readonly id="FULL_DATE_4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label>Тип тарифа</label>
+                <select name="CABIN_PREF">
+                    <option value="Y">Эконом</option>
+                    <option value="C">Бизнес</option>
+                </select>
+            </div>
+            <div class="col-4">
+                <label>Взрослые</label>
+                <select name="ADTCOUNT">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="col-4">
+                <label>Дети 2-12</label>
+                <select name="CHDCOUNT">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="col-4">
+                <label>Младенцы 0-2</label>
+                <select name="INFCOUNT">
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Поиск">
+        </div>
+    </div>
+</div>

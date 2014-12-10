@@ -53,6 +53,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         $view->headScript()->appendFile('/assets/javascripts/jquery.ui.min.js');
         $view->headScript()->appendFile('/assets/javascripts/jquery-ui.js');
         $view->headScript()->appendFile('/assets/javascripts/jquery.global.js');
+        $view->headScript()->appendFile('/assets/javascripts/aviaform.js');
         
         return $view;
     }
